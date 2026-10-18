@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Maieutica · a tutor that asks, and a record that is yours</title>
+<meta name="description" content="Maieutica asks what you want to get better at, reads your sources, agrees a goal with you, and teaches it one step at a time. Each step is a document you keep. Nothing is graded.">
+<link rel="icon" href="brand/icon-small.svg" type="image/svg+xml">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  NFR-44 · Everything that belongs to one version (its number, its files, their sizes and checksums, the systems it was
+  checked on) is written by the release job when Richard publishes, between the generated:start and generated:end
+  markers below, and nowhere else. Until Slice 6c builds that job, each of those regions holds a marked sample.
+-->
+<a class="skip" href="#download">Skip to the download</a>
+
+<header class="head">
+  <div class="bar">
+    <a class="home" href="./" aria-label="Maieutica, this page">
+      <img class="icon" src="brand/icon.svg" alt="" width="32" height="32">
+      <span class="wordmark" role="img" aria-label="Maieutica"></span>
+    </a>
+    <nav aria-label="On this page">
+      <a href="#download">Download</a>
+      <a href="#versions">Versions</a>
+      <a href="#what-is-seen">What is seen</a>
+    </nav>
+  </div>
+  <div class="hero">
+    <h1>Maieutica is a tutor that asks what you want to learn, reads your sources, and teaches you one step at a time.</h1>
+    <p class="lede">Every step is a document you keep. Nothing is graded, and nobody is sent a report of what you learn. Only you say what you can do.</p>
+    <div class="ctas">
+      <a class="button primary" href="#windows">Get it for Windows</a>
+      <a class="button" href="#linux">Get it for Linux</a>
+    </div>
+    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · <span class="sample-tag">Sample</span> version 0.1.0, about 120 MB<!-- generated:end latest --></p>
+  </div>
+</header>
+
+<main>
+  <section class="different" aria-labelledby="different">
+    <h2 id="different">What makes it different</h2>
+    <p>Its name comes from <em>maieutics</em>, Socrates' art of helping someone find what they want to know by asking them.</p>
+    <ol class="five">
+      <li>
+        <h3>It is yours</h3>
+        <p>Not assigned, not graded, no manager view. The record is a folder on your computer, or in a cloud folder of your own.</p>
+      </li>
+      <li>
+        <h3>It is grounded</h3>
+        <p>It reads your sources first, names them, and says what it could not read.</p>
+      </li>
+      <li>
+        <h3>It admits its limits</h3>
+        <p>Where the knowledge lives with a colleague, it prepares the conversation with them instead of pretending to teach it.</p>
+      </li>
+      <li>
+        <h3>Only you attest</h3>
+        <p>"Taught" is your tutor's claim. "I can do this" is yours, and only yours marks a module as learnt.</p>
+      </li>
+      <li>
+        <h3>What it writes outlives it</h3>
+        <p>Every step is a document that stands on its own. Copy the folder, keep it, hand it on; it still teaches without the app.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="download" id="download" aria-labelledby="download-h">
+    <h2 id="download-h">Download</h2>
+    <!-- generated:start notice -->
+    <p class="sample-note"><span class="sample-tag">Sample</span> Nothing is published yet. The versions, systems, sizes and checksums on this page are placeholders until the first release.</p>
+    <!-- generated:end notice -->
+
+    <dl class="facts">
+      <div><dt>You need</dt><dd><strong>A Claude account from Anthropic.</strong> Your tutor is Claude, and without an account Maieutica cannot teach. Either a paid Claude plan, which you sign in to from the app, or your own Anthropic API key, billed per use.</dd></div>
+      <div><dt>Costs</dt><dd>Maieutica is free. What your tutor does is paid to Anthropic, by your plan or your key.</dd></div>
+      <div><dt>Published by</dt><dd>Richard Keiser, Zurich, Switzerland. The Windows installers are <strong>not signed yet</strong>, so Windows names no publisher: check the file's checksum before you run it.</dd></div>
+      <div><dt>Space</dt><dd>About 400 MB once installed, and room for your curricula.</dd></div>
+    </dl>
+
+    <div class="platforms">
+      <article class="platform" id="windows" aria-labelledby="windows-h">
+        <h3 id="windows-h">Windows</h3>
+        <!-- generated:start windows -->
+        <p class="needs"><span class="sample-tag">Sample</span> Checked on Windows 10 and Windows 11, 64-bit. No administrator rights: it installs for you alone.</p>
+        <a class="button primary" href="#versions">Maieutica-0.1.0-setup.exe · 118 MB</a>
+        <!-- generated:end windows -->
+        <div class="steps">
+          <h4>What Windows shows the first time</h4>
+          <p>Windows does not know a new file yet, and the installer is not signed, so Windows stops it once:</p>
+          <ol>
+            <li>"Windows protected your PC" appears. Click <strong>More info</strong>.</li>
+            <li>It says <strong>Publisher: Unknown publisher</strong>. That is expected while the installers are not signed, so first check the file: its SHA-256 must be the one listed for it under <a href="#versions">Every version</a> (<a href="#check">how</a>).</li>
+            <li>If it matches, click <strong>Run anyway</strong>. If it does not, delete the file: it is not the one published here.</li>
+          </ol>
+        </div>
+      </article>
+      <article class="platform" id="linux" aria-labelledby="linux-h">
+        <h3 id="linux-h">Linux</h3>
+        <!-- generated:start linux -->
+        <p class="needs"><span class="sample-tag">Sample</span> Checked on Ubuntu 22.04 and 24.04, 64-bit.</p>
+        <a class="button primary" href="#versions">maieutica_0.1.0_amd64.deb · 121 MB</a>
+        <!-- generated:end linux -->
+        <p class="aside">The .deb opens in your software installer. An update to it asks for your computer's password, possibly twice.</p>
+      </article>
+    </div>
+
+    <div class="checksum" id="check">
+      <h3>Check that the file is the one published here</h3>
+      <p>Each file's SHA-256 checksum is in its version below. Compare it with what your computer computes from the file in your Downloads folder. Capital and small letters count as the same.</p>
+      <p class="code"><span class="label">Windows, in PowerShell</span><code>Get-FileHash "$HOME\Downloads\Maieutica-*-setup.exe"</code></p>
+      <p class="code"><span class="label">Linux, in a terminal</span><code>sha256sum ~/Downloads/maieutica_*_amd64.deb</code></p>
+    </div>
+  </section>
+
+  <section class="versions" id="versions" aria-labelledby="versions-h">
+    <h2 id="versions-h">Every version</h2>
+    <p>Every version stays here, with what it changed. A file is never replaced under the same version: a fix is a new version.</p>
+    <!-- generated:start versions -->
+    <div class="sample-note"><span class="sample-tag">Sample</span> No version is published yet. This list is written by the release job; what follows shows its form.</div>
+    <article class="version" aria-labelledby="v010">
+      <header>
+        <h3 id="v010">0.1.0</h3>
+        <p class="date">[the date it is published]</p>
+      </header>
+      <div class="notes">
+        <h4>New</h4>
+        <ul><li>[the release's notes, from CHANGES.md]</li></ul>
+      </div>
+      <table>
+        <caption class="visually-hidden">Files of version 0.1.0</caption>
+        <thead><tr><th scope="col">File</th><th scope="col">Size</th><th scope="col">SHA-256</th></tr></thead>
+        <tbody>
+          <tr><td><a href="#versions">Maieutica-0.1.0-setup.exe</a></td><td>118 MB</td><td><span class="visually-hidden">SHA-256 </span><code>[64 hexadecimal characters]</code></td></tr>
+          <tr><td><a href="#versions">maieutica_0.1.0_amd64.deb</a></td><td>121 MB</td><td><span class="visually-hidden">SHA-256 </span><code>[64 hexadecimal characters]</code></td></tr>
+        </tbody>
+      </table>
+    </article>
+    <!-- generated:end versions -->
+  </section>
+
+  <section class="seen" id="what-is-seen" aria-labelledby="seen-h">
+    <h2 id="seen-h">What is seen, and by whom</h2>
+    <dl class="facts">
+      <div><dt>This page</dt><dd>Sets no cookies, counts no visitors and loads nothing from anyone else: no analytics, no fonts from a font service. GitHub serves it, and sees your address as any web host does. Nobody here receives a record of it.</dd></div>
+      <div><dt>Updates</dt><dd>The app checks for a new version when it starts and once a day, by reading one small file from GitHub. GitHub sees your computer's network address and the time of each check. The app tells you this before its first check, and you can turn checks off. Nothing is downloaded until you agree.</dd></div>
+      <div><dt>What you write</dt><dd>What you tell your tutor, and what it reads for you, goes to Anthropic, which runs the model, under your plan's or your key's terms. Your tutor also opens the web pages and searches you allow, and any service you connect to a curriculum; the app shows you each one. Your record stays in your folder.</dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><span class="wordmark small" role="img" aria-label="Maieutica"></span> is made by Richard Keiser in Zurich. Its download page has one address, <strong>getmaieutica.com</strong>: a copy offered anywhere else is not from him unless this page links to it.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* Every colour, size and space is a token from tokens.css (design/tokens.json). Percentages, viewport units, bare numbers
+   and em measures (a line's length, a breakpoint) are layout: they follow the reader's type size, so no px token can. */
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('brand/fonts/source-serif-4-latin-wght-normal.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('brand/fonts/source-serif-4-latin-wght-italic.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--colour-bg);
+  color: var(--colour-ink);
+  font-family: var(--type-family);
+  font-size: var(--type-scale-base);
+  line-height: var(--type-lineHeight-normal);
+}
+a { color: inherit; text-underline-offset: 0.2em; }
+:focus-visible { outline: var(--size-edge-strong) solid var(--colour-ink); outline-offset: var(--size-edge-strong); }
+.head :focus-visible { outline-color: var(--colour-on-ink); }
+h1, h2, h3, h4 { margin: 0; }
+h2 {
+  font-family: var(--type-serif);
+  font-size: var(--type-scale-xl);
+  font-weight: var(--type-weight-strong);
+  line-height: var(--type-lineHeight-tight);
+}
+h3 { font-size: var(--type-scale-base); font-weight: var(--type-weight-strong); line-height: var(--type-lineHeight-normal); }
+p { margin: 0; }
+code { font-family: var(--type-mono); font-size: var(--type-scale-s); overflow-wrap: anywhere; }
+
+.skip { position: absolute; left: -100vw; }
+.skip:focus { left: var(--space-l); top: var(--space-l); z-index: 1; background: var(--colour-on-ink); color: var(--colour-ink); padding: var(--space-s) var(--space-m); border-radius: var(--radius-m); }
+.visually-hidden { position: absolute; width: var(--size-edge); height: var(--size-edge); overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* The wordmark is design/brand/wordmark.svg as a mask, so it takes the colour of the text around it. */
+.wordmark {
+  display: inline-block;
+  height: 1.25em;
+  aspect-ratio: 4969 / 730;
+  background: currentColor;
+  -webkit-mask: url('brand/wordmark.svg') no-repeat left center / contain;
+  mask: url('brand/wordmark.svg') no-repeat left center / contain;
+  vertical-align: -0.2em;
+}
+.wordmark.small { height: 1.1em; }
+
+/* The head: ink is the ground (ADR-034). */
+.head { background: var(--colour-ink); color: var(--colour-on-ink); }
+.bar, .hero, main > section, .foot {
+  max-width: var(--size-column);
+  margin: 0 auto;
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+}
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-m) var(--space-xl); padding-top: var(--space-l); padding-bottom: var(--space-l); }
+.home { display: inline-flex; align-items: center; gap: var(--space-m); text-decoration: none; font-size: var(--type-scale-lg); min-height: var(--size-control); }
+.home .icon { border-radius: var(--radius-s); outline: var(--size-edge) solid var(--colour-on-ink-muted); outline-offset: calc(-1 * var(--size-edge)); }
+.bar nav { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-l); }
+@media (min-width: 40em) { .bar nav { margin-left: auto; } }
+.bar nav a { color: var(--colour-on-ink-muted); text-decoration: none; min-height: var(--size-control); display: inline-flex; align-items: center; }
+.bar nav a:hover { color: var(--colour-on-ink); text-decoration: underline; }
+
+.hero { padding-top: var(--space-xxl); padding-bottom: calc(var(--space-xxl) * 1.5); display: flex; flex-direction: column; gap: var(--space-l); }
+.hero h1 {
+  font-family: var(--type-serif);
+  font-weight: var(--type-weight-strong);
+  font-size: clamp(var(--type-scale-xl), 2.6vw + var(--space-m), var(--type-scale-display));
+  line-height: var(--type-lineHeight-tight);
+  max-width: 22em;
+  text-wrap: balance;
+}
+.lede { font-family: var(--type-serif); font-size: var(--type-scale-lg); line-height: var(--type-lineHeight-reading); color: var(--colour-on-ink-muted); max-width: 32em; }
+.ctas { display: flex; flex-wrap: wrap; gap: var(--space-m); padding-top: var(--space-s); }
+.meta { color: var(--colour-on-ink-muted); font-size: var(--type-scale-s); }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--size-control);
+  padding: var(--space-s) var(--space-l);
+  border-radius: var(--radius-m);
+  border: var(--size-edge) solid currentColor;
+  font-weight: var(--type-weight-strong);
+  text-decoration: none;
+  text-align: center;
+  transition: background-color var(--motion-quick);
+}
+.head .button { border-color: var(--colour-on-ink-muted); }
+.head .button.primary { background: var(--colour-on-ink); color: var(--colour-ink); border-color: var(--colour-on-ink); }
+.head .button:not(.primary):hover { background: var(--colour-on-ink); color: var(--colour-ink); }
+main .button { border-color: var(--colour-muted); }
+main .button.primary { background: var(--colour-ink); color: var(--colour-on-ink); border-color: var(--colour-ink); }
+main .button:not(.primary):hover { background: var(--colour-sunk); }
+
+.sample-tag {
+  display: inline-block;
+  border: var(--size-edge) solid currentColor;
+  border-radius: var(--radius-s);
+  padding: 0 var(--space-s);
+  font-size: var(--type-scale-xs);
+  font-weight: var(--type-weight-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: var(--space-xs);
+  vertical-align: 0.1em;
+}
+.sample-note { background: var(--colour-sunk); border-radius: var(--radius-m); padding: var(--space-m) var(--space-l); color: var(--colour-ink); }
+
+main > section { padding-top: calc(var(--space-xxl) * 1.5); display: flex; flex-direction: column; gap: var(--space-l); }
+main > section > p { max-width: var(--size-column-narrow); }
+
+/* Five points, one a row: title beside its sentence, so no grid leaves a hole. */
+.five { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-l); }
+.five li { display: grid; grid-template-columns: minmax(0, 14em) minmax(0, 1fr); gap: var(--space-xs) var(--space-xl); border-top: var(--size-edge) solid var(--colour-line); padding-top: var(--space-m); }
+.five h3 { font-family: var(--type-serif); font-size: var(--type-scale-lg); line-height: var(--type-lineHeight-tight); }
+.five p { font-family: var(--type-serif); font-size: var(--type-scale-reading); line-height: var(--type-lineHeight-reading); }
+
+.facts { margin: 0; display: flex; flex-direction: column; gap: var(--space-m); }
+.facts > div { display: grid; grid-template-columns: minmax(0, 9em) minmax(0, 1fr); gap: var(--space-l); border-top: var(--size-edge) solid var(--colour-line); padding-top: var(--space-m); }
+.facts dt { font-weight: var(--type-weight-strong); }
+.facts dd { margin: 0; max-width: var(--size-column-narrow); }
+
+.platforms { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr)); gap: var(--space-l); }
+.platform { border: var(--size-edge) solid var(--colour-line); border-radius: var(--radius-l); padding: var(--space-l); display: flex; flex-direction: column; gap: var(--space-m); background: var(--colour-panel); scroll-margin-top: var(--space-l); }
+.platform h3 { font-size: var(--type-scale-lg); line-height: var(--type-lineHeight-tight); }
+.needs, .aside { color: var(--colour-muted); }
+.aside { font-size: var(--type-scale-s); }
+
+.steps { display: flex; flex-direction: column; gap: var(--space-s); border-top: var(--size-edge) solid var(--colour-line); padding-top: var(--space-m); }
+.steps h4 { font-size: var(--type-scale-base); font-weight: var(--type-weight-strong); }
+.steps ol { padding-left: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-xs); }
+.checksum { display: flex; flex-direction: column; gap: var(--space-s); border-top: var(--size-edge) solid var(--colour-line); padding-top: var(--space-m); scroll-margin-top: var(--space-l); }
+.code { display: flex; flex-direction: column; gap: var(--space-xs); }
+.code .label { font-size: var(--type-scale-s); color: var(--colour-muted); }
+.code code { background: var(--colour-sunk); border-radius: var(--radius-s); padding: var(--space-s) var(--space-m); }
+
+.version { border: var(--size-edge) solid var(--colour-line); border-radius: var(--radius-l); padding: var(--space-l); display: flex; flex-direction: column; gap: var(--space-m); }
+.version > header { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-m); }
+.version h3 { font-family: var(--type-serif); font-size: var(--type-scale-xl); line-height: var(--type-lineHeight-tight); }
+.version .date { color: var(--colour-muted); }
+.version h4 { font-size: var(--type-scale-s); color: var(--colour-muted); font-weight: var(--type-weight-strong); }
+.version ul { margin: var(--space-xs) 0 0; padding-left: var(--space-xl); }
+.version table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+.version th, .version td { text-align: left; padding: var(--space-s) var(--space-m) var(--space-s) 0; border-top: var(--size-edge) solid var(--colour-line); vertical-align: top; }
+.version th { font-size: var(--type-scale-s); color: var(--colour-muted); font-weight: var(--type-weight-strong); }
+.version td a { font-weight: var(--type-weight-strong); }
+
+.foot { padding-top: calc(var(--space-xxl) * 1.5); padding-bottom: var(--space-xxl); color: var(--colour-muted); }
+.foot p { border-top: var(--size-edge) solid var(--colour-line); padding-top: var(--space-l); }
+
+/* A narrow window: labels above what they label, and each file of a version a block of its own. */
+@media (max-width: 40em) {
+  .five li { grid-template-columns: minmax(0, 1fr); }
+  .facts > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .version thead { position: absolute; width: var(--size-edge); height: var(--size-edge); overflow: hidden; clip-path: inset(50%); }
+  .version table, .version tbody, .version tr, .version td { display: block; width: 100%; }
+  .version tr { border-top: var(--size-edge) solid var(--colour-line); padding: var(--space-s) 0; }
+  .version td { border: 0; padding: 0; }
+  .version td:nth-child(2) { color: var(--colour-muted); font-size: var(--type-scale-s); }
+}
+
+/* Forced colours drop backgrounds, and the wordmark is a mask over one: give it the system's text colour. */
+@media (forced-colors: active) { .wordmark { forced-color-adjust: none; background: CanvasText; } }
+
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }

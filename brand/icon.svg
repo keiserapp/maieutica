@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Maieutica">
+  <title>Maieutica</title>
+  <!-- ADR-034 · the lamp and the pool of light it throws on the desk: on-ink (#fdfcf9) on ink (#1b1b1f). Sizes 32 px and up. -->
+  <rect width="96" height="96" rx="22" fill="#1b1b1f"/>
+  <circle cx="48" cy="30" r="5" fill="#fdfcf9"/>
+  <path d="M18 74 A30 30 0 0 1 78 74 Z" fill="#fdfcf9"/>
+</svg>

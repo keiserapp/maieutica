@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Maieutica">
+  <title>Maieutica</title>
+  <!-- ADR-034 · the icon below 32 px: the lamp's bulb would be a speck, so only the pool of light remains, larger. -->
+  <rect width="96" height="96" rx="20" fill="#1b1b1f"/>
+  <path d="M12 80 A36 36 0 0 1 84 80 Z" fill="#fdfcf9"/>
+</svg>
