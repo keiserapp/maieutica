@@ -14,8 +14,8 @@
 <body>
 <!--
   NFR-44 · Everything that belongs to one version (its number, its files, their sizes and checksums, the systems it was
-  checked on) is written by the release job when Richard publishes, between the generated:start and generated:end
-  markers below, and nowhere else. Until Slice 6c builds that job, each of those regions holds a marked sample.
+  checked on) is written by the publishing job when Richard publishes (`release-page.mjs`, announce.yml), between the
+  generated:start and generated:end markers below, and nowhere else. In this repository each region holds a marked sample.
 -->
 <a class="skip" href="#download">Skip to the download</a>
 
@@ -38,7 +38,7 @@
       <a class="button primary" href="#windows">Get it for Windows</a>
       <a class="button" href="#linux">Get it for Linux</a>
     </div>
-    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · <span class="sample-tag">Sample</span> version 0.1.0, about 120 MB<!-- generated:end latest --></p>
+    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · version 0.1.0, about 170 MB<!-- generated:end latest --></p>
   </div>
 </header>
 
@@ -73,7 +73,6 @@
   <section class="download" id="download" aria-labelledby="download-h">
     <h2 id="download-h">Download</h2>
     <!-- generated:start notice -->
-    <p class="sample-note"><span class="sample-tag">Sample</span> Nothing is published yet. The versions, systems, sizes and checksums on this page are placeholders until the first release.</p>
     <!-- generated:end notice -->
 
     <dl class="facts">
@@ -87,8 +86,8 @@
       <article class="platform" id="windows" aria-labelledby="windows-h">
         <h3 id="windows-h">Windows</h3>
         <!-- generated:start windows -->
-        <p class="needs"><span class="sample-tag">Sample</span> Checked on Windows 10 and Windows 11, 64-bit. No administrator rights: it installs for you alone.</p>
-        <a class="button primary" href="#versions">Maieutica-0.1.0-setup.exe · 118 MB</a>
+        <p class="needs">Checked on Windows 10 and Windows 11, 64-bit. No administrator rights: it installs for you alone.</p>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_x64-setup.exe">Maieutica_0.1.0_x64-setup.exe · 114 MB</a>
         <!-- generated:end windows -->
         <div class="steps">
           <h4>What Windows shows the first time</h4>
@@ -103,8 +102,8 @@
       <article class="platform" id="linux" aria-labelledby="linux-h">
         <h3 id="linux-h">Linux</h3>
         <!-- generated:start linux -->
-        <p class="needs"><span class="sample-tag">Sample</span> Checked on Ubuntu 22.04 and 24.04, 64-bit.</p>
-        <a class="button primary" href="#versions">maieutica_0.1.0_amd64.deb · 121 MB</a>
+        <p class="needs">Checked on Ubuntu 22.04 and 24.04, 64-bit.</p>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_amd64.deb">Maieutica_0.1.0_amd64.deb · 175 MB</a>
         <!-- generated:end linux -->
         <p class="aside">The .deb opens in your software installer. An update to it asks for your computer's password, possibly twice.</p>
       </article>
@@ -113,8 +112,8 @@
     <div class="checksum" id="check">
       <h3>Check that the file is the one published here</h3>
       <p>Each file's SHA-256 checksum is in its version below. Compare it with what your computer computes from the file in your Downloads folder. Capital and small letters count as the same.</p>
-      <p class="code"><span class="label">Windows, in PowerShell</span><code>Get-FileHash "$HOME\Downloads\Maieutica-*-setup.exe"</code></p>
-      <p class="code"><span class="label">Linux, in a terminal</span><code>sha256sum ~/Downloads/maieutica_*_amd64.deb</code></p>
+      <p class="code"><span class="label">Windows, in PowerShell</span><code>Get-FileHash "$HOME\Downloads\Maieutica_*_x64-setup.exe"</code></p>
+      <p class="code"><span class="label">Linux, in a terminal</span><code>sha256sum ~/Downloads/Maieutica_*_amd64.deb</code></p>
     </div>
   </section>
 
@@ -122,22 +121,28 @@
     <h2 id="versions-h">Every version</h2>
     <p>Every version stays here, with what it changed. A file is never replaced under the same version: a fix is a new version.</p>
     <!-- generated:start versions -->
-    <div class="sample-note"><span class="sample-tag">Sample</span> No version is published yet. This list is written by the release job; what follows shows its form.</div>
-    <article class="version" aria-labelledby="v010">
+    <article class="version" data-version="0.1.0" aria-labelledby="v010">
       <header>
         <h3 id="v010">0.1.0</h3>
-        <p class="date">[the date it is published]</p>
+        <p class="date"><time datetime="2026-10-21">21 October 2026</time></p>
       </header>
       <div class="notes">
         <h4>New</h4>
-        <ul><li>[the release's notes, from CHANGES.md]</li></ul>
+        <h5>Learning with Maieutica</h5>
+        <ul><li>Maieutica helps you work out what you need to learn, then teaches it one step at a time. It asks you a few questions, looks into the subject, and agrees a goal with you before it writes anything.</li><li>The agent is told never to note your health, money, family, beliefs, politics, sexuality or gender, or what an employer should not read. A note that plainly says one of these about you is refused.</li></ul>
+        <h5>Your curricula</h5>
+        <ul><li>Your curricula are yours. They are kept on this computer, or in a folder you choose, and nothing in them is scored. Keep them on a shared or synced drive to use them from your other computers too.</li><li>If your curricula say they were written by a newer Maieutica, it names the file, changes nothing, and offers the version that reads them.</li></ul>
+        <h5>Signing in and paying for the agent</h5>
+        <ul><li>Sign in with your Claude plan from the window, without a terminal. Or have the agent paid by your own API key, kept in this computer’s password store and read only by Maieutica.</li><li>Settings shows who is signed in and on which plan, and lets you sign out or switch account.</li><li>An API key typed or pasted where the agent would read it is never sent or kept. Maieutica says why, and leaves the rest of what you typed in the box.</li></ul>
+        <h5>Installing and updating</h5>
+        <ul><li>On Windows, Maieutica installs for you alone, with everything it needs, and keeps a log you can send when something goes wrong. On Linux it installs from a .deb.</li><li>Maieutica looks for a newer version by itself, and the check carries nothing about you. Before anything is downloaded, it shows what the new version changes. It installs only what its publisher signed, and only when you press restart and nothing would be lost.</li><li>Settings › About Maieutica shows which version you have, and which version of the agent’s program came with it.</li><li>The download page lists every version, with each file’s size and checksum.</li></ul>
       </div>
       <table>
         <caption class="visually-hidden">Files of version 0.1.0</caption>
         <thead><tr><th scope="col">File</th><th scope="col">Size</th><th scope="col">SHA-256</th></tr></thead>
         <tbody>
-          <tr><td><a href="#versions">Maieutica-0.1.0-setup.exe</a></td><td>118 MB</td><td><span class="visually-hidden">SHA-256 </span><code>[64 hexadecimal characters]</code></td></tr>
-          <tr><td><a href="#versions">maieutica_0.1.0_amd64.deb</a></td><td>121 MB</td><td><span class="visually-hidden">SHA-256 </span><code>[64 hexadecimal characters]</code></td></tr>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_x64-setup.exe">Maieutica_0.1.0_x64-setup.exe</a></td><td>114 MB</td><td><span class="visually-hidden">SHA-256 </span><code>6fad1873adc8caeb4c84d629c51e006a8be0edfeeb58bbdd6493a52543e76f7d</code></td></tr>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_amd64.deb">Maieutica_0.1.0_amd64.deb</a></td><td>175 MB</td><td><span class="visually-hidden">SHA-256 </span><code>9664a75f1608245eed0d5370a0c7d58f543388abd23443539f0642ca44838283</code></td></tr>
         </tbody>
       </table>
     </article>
