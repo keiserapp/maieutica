@@ -38,7 +38,7 @@
       <a class="button primary" href="#windows">Get it for Windows</a>
       <a class="button" href="#linux">Get it for Linux</a>
     </div>
-    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · version 0.1.0, about 170 MB<!-- generated:end latest --></p>
+    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · version 0.1.1, about 170 MB<!-- generated:end latest --></p>
   </div>
 </header>
 
@@ -87,7 +87,7 @@
         <h3 id="windows-h">Windows</h3>
         <!-- generated:start windows -->
         <p class="needs">Checked on Windows 10 and Windows 11, 64-bit. No administrator rights: it installs for you alone.</p>
-        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_x64-setup.exe">Maieutica_0.1.0_x64-setup.exe · 114 MB</a>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.1/Maieutica_0.1.1_x64-setup.exe">Maieutica_0.1.1_x64-setup.exe · 114 MB</a>
         <!-- generated:end windows -->
         <div class="steps">
           <h4>What Windows shows the first time</h4>
@@ -103,7 +103,7 @@
         <h3 id="linux-h">Linux</h3>
         <!-- generated:start linux -->
         <p class="needs">Checked on Ubuntu 22.04 and 24.04, 64-bit.</p>
-        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.0/Maieutica_0.1.0_amd64.deb">Maieutica_0.1.0_amd64.deb · 175 MB</a>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.1.1/Maieutica_0.1.1_amd64.deb">Maieutica_0.1.1_amd64.deb · 175 MB</a>
         <!-- generated:end linux -->
         <p class="aside">The .deb opens in your software installer. An update to it asks for your computer's password, possibly twice.</p>
       </article>
@@ -121,6 +121,27 @@
     <h2 id="versions-h">Every version</h2>
     <p>Every version stays here, with what it changed. A file is never replaced under the same version: a fix is a new version.</p>
     <!-- generated:start versions -->
+    <article class="version" data-version="0.1.1" aria-labelledby="v0-1-1">
+      <header>
+        <h3 id="v0-1-1"><span id="v011"></span>0.1.1</h3>
+        <p class="date"><time datetime="2026-10-22">22 October 2026</time></p>
+      </header>
+      <div class="notes">
+        <h4>Fixed</h4>
+        <h5>Signing in and paying for the agent</h5>
+        <ul><li>In a narrow or zoomed window, “Cannot tell if you are signed in” no longer takes half the window with its reason. Press it to read why, with “Check again” under the reason.</li><li>When Maieutica is slow to answer “Sign out”, the window now waits until it knows how the sign-out ended, instead of saying it cannot tell.</li><li>A copy of your account’s details that Maieutica could not remove when you signed out is removed again the next time it starts. If it still cannot be, Settings › Signing in says where it is.</li><li>An organisation named after the part of your email before the @, such as “richard’s Organization”, is no longer shown as its name, in the bar or in Settings.</li></ul>
+        <h5>Installing and updating</h5>
+        <ul><li>Starting Maieutica a second time no longer spoils an update the first was about to install.</li><li>When an update is not installed, Maieutica now says what its check found, instead of always saying the file was changed on this computer.</li><li>A download that brings more than its announced size is stopped, and nothing of it is kept.</li><li>A link from Maieutica to one version on getmaieutica.com now opens that version, whatever its number.</li></ul>
+      </div>
+      <table>
+        <caption class="visually-hidden">Files of version 0.1.1</caption>
+        <thead><tr><th scope="col">File</th><th scope="col">Size</th><th scope="col">SHA-256</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.1.1/Maieutica_0.1.1_x64-setup.exe">Maieutica_0.1.1_x64-setup.exe</a></td><td>114 MB</td><td><span class="visually-hidden">SHA-256 </span><code>b808c499216e31a900c95c1fa5e697af9202f2c00e0d8166b29688b9591978e1</code></td></tr>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.1.1/Maieutica_0.1.1_amd64.deb">Maieutica_0.1.1_amd64.deb</a></td><td>175 MB</td><td><span class="visually-hidden">SHA-256 </span><code>7515079693d5ae14899d7d8b3fd41bfabc9c6e3ff255ff07961b330dbee873cb</code></td></tr>
+        </tbody>
+      </table>
+    </article>
     <article class="version" data-version="0.1.0" aria-labelledby="v010">
       <header>
         <h3 id="v010">0.1.0</h3>
