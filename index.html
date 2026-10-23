@@ -38,7 +38,7 @@
       <a class="button primary" href="#windows">Get it for Windows</a>
       <a class="button" href="#linux">Get it for Linux</a>
     </div>
-    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · version 0.2.0, about 170 MB<!-- generated:end latest --></p>
+    <p class="meta">A free app for your computer · needs a paid Claude plan or an Anthropic API key<!-- generated:start latest --> · version 0.3.0, about 180 MB<!-- generated:end latest --></p>
   </div>
 </header>
 
@@ -87,7 +87,7 @@
         <h3 id="windows-h">Windows</h3>
         <!-- generated:start windows -->
         <p class="needs">Checked on Windows 10 and Windows 11, 64-bit. No administrator rights: it installs for you alone.</p>
-        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.2.0/Maieutica_0.2.0_x64-setup.exe">Maieutica_0.2.0_x64-setup.exe · 114 MB</a>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.3.0/Maieutica_0.3.0_x64-setup.exe">Maieutica_0.3.0_x64-setup.exe · 115 MB</a>
         <!-- generated:end windows -->
         <div class="steps">
           <h4>What Windows shows the first time</h4>
@@ -103,7 +103,7 @@
         <h3 id="linux-h">Linux</h3>
         <!-- generated:start linux -->
         <p class="needs">Checked on Ubuntu 22.04 and 24.04, 64-bit.</p>
-        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.2.0/Maieutica_0.2.0_amd64.deb">Maieutica_0.2.0_amd64.deb · 175 MB</a>
+        <a class="button primary" href="https://github.com/keiserapp/maieutica/releases/download/v0.3.0/Maieutica_0.3.0_amd64.deb">Maieutica_0.3.0_amd64.deb · 180 MB</a>
         <!-- generated:end linux -->
         <p class="aside">The .deb opens in your software installer. An update to it asks for your computer's password, possibly twice.</p>
       </article>
@@ -121,6 +121,28 @@
     <h2 id="versions-h">Every version</h2>
     <p>Every version stays here, with what it changed. A file is never replaced under the same version: a fix is a new version.</p>
     <!-- generated:start versions -->
+    <article class="version" data-version="0.3.0" aria-labelledby="v0-3-0">
+      <header>
+        <h3 id="v0-3-0"><span id="v030"></span>0.3.0</h3>
+        <p class="date"><time datetime="2026-10-23">23 October 2026</time></p>
+      </header>
+      <div class="notes">
+        <h4>New</h4>
+        <h5>Your sources</h5>
+        <ul><li>The agent now reads your files as Claude reads them: pictures and photos (JPEG, PNG, GIF, WebP) are seen, a PDF’s pages are seen with their text — scanned pages, charts and photos included — and Excel and PowerPoint files are read as their text.</li><li>Before you choose a file, the Sources page says which kinds can be added, and the file dialog offers just those first.</li><li>A file that cannot be read is refused when you choose it, with what to do: a HEIC photo saved as JPEG, an older Word, Excel or PowerPoint file saved in the newer format, or a file over 20 MB split.</li><li>A photo is sent without where, when and with what it was taken.</li><li>The agent reads every file to its end before it reports, or says what it leaves out and why. “What was read” shows which pages of a PDF were seen.</li><li>Maieutica asks again what it may send, because files now go as they are. The page says why, and marks what is new.</li><li>0.3.0 stores your curricula in a newer way. Once it has written to them, a computer of yours still on 0.2 cannot open them until it is updated too.</li></ul>
+        <h4>Fixed</h4>
+        <h5>Learning a step</h5>
+        <ul><li>Under “How is it going?” and in “How you asked to be taught”, a press while an answer was being saved did nothing. Every button there now waits, marked, until it is saved.</li></ul>
+      </div>
+      <table>
+        <caption class="visually-hidden">Files of version 0.3.0</caption>
+        <thead><tr><th scope="col">File</th><th scope="col">Size</th><th scope="col">SHA-256</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.3.0/Maieutica_0.3.0_x64-setup.exe">Maieutica_0.3.0_x64-setup.exe</a></td><td>115 MB</td><td><span class="visually-hidden">SHA-256 </span><code>13a162bd7d744d4055978c4ca00827474b2c2f7a9681517a1e9e2a811af7167a</code></td></tr>
+          <tr><td><a href="https://github.com/keiserapp/maieutica/releases/download/v0.3.0/Maieutica_0.3.0_amd64.deb">Maieutica_0.3.0_amd64.deb</a></td><td>180 MB</td><td><span class="visually-hidden">SHA-256 </span><code>2389d048c7d01464a27a8f6efba400b17a0f439ce384c51aab4f22787d032406</code></td></tr>
+        </tbody>
+      </table>
+    </article>
     <article class="version" data-version="0.2.0" aria-labelledby="v0-2-0">
       <header>
         <h3 id="v0-2-0"><span id="v020"></span>0.2.0</h3>
