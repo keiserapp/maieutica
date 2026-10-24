@@ -64,6 +64,11 @@
   --size-handle: 8px;
   --size-panel-step: 24px;
   --size-step: 560px;
+  --size-step-gutter: 1.5em;
+  --size-bar-wide: 864px;
+  --size-figure: 60em;
+  --size-step-most: 500000px;
+  --size-icon: 16px;
   --motion-quick: 120ms;
   --motion-normal: 350ms;
 }
